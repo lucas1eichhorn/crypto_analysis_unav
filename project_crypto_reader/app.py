@@ -10,7 +10,6 @@ st.set_page_config(layout="wide", page_icon="favicon.png", page_title='Análisis
                    initial_sidebar_state='auto')
 # headers
 
-st.image('assets/main-banner.png', width=200)
 st.write('''# Análisis de criptomonedas con Python''')
 st.write('---')
 
