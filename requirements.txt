@@ -5,3 +5,4 @@ plotly == 5.3.1
 numpy == 1.20.1
 streamlit == 1.2.0
 requests == 2.25.1
+ta == 0.8.0
