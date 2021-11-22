@@ -6,11 +6,11 @@ from KrakenAPIConnector import KrakenAPIConnector
 from datetime import datetime, timedelta
 
 # seteamos el layout
-st.set_page_config(layout="wide", page_icon="assets/favicon.png", page_title='Análisis de criptomonedas',
+st.set_page_config(layout="wide", page_icon="favicon.png", page_title='Análisis de criptomonedas',
                    initial_sidebar_state='auto')
 # headers
 
-with open("assets/custom.css") as f:
+with open("custom.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 st.image('assets/main-banner.png', width=200)
