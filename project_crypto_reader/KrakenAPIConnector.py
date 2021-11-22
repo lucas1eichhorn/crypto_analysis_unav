@@ -3,6 +3,7 @@ import requests
 import krakenex
 from pykrakenapi import KrakenAPI
 
+
 class KrakenAPIConnector(object):
     """
    Singleton de conexion a la API de Kraken
@@ -10,12 +11,11 @@ class KrakenAPIConnector(object):
     __instance = None
     api = KrakenAPI(krakenex.API())
     pares = []
-    intervalo_velas={"15 min":15, "30 min":30,"Hora":60,"Diario":1440,"Semanal":10080}
-
-
+    pares_json = []
+    intervalo_velas = {"15 min": 15, "30 min": 30, "Hora": 60, "Diario": 1440, "Semanal": 10080}
 
     def __str__(self):
-        return 'Singleton de conexion a la API de Kraken'
+        return 'Singleton de conexión a la API de Kraken'
 
     def __new__(cls):
         if KrakenAPIConnector.__instance is None:
@@ -25,13 +25,11 @@ class KrakenAPIConnector(object):
     def get_pairs(self):
         try:
             response = requests.get("https://api.kraken.com/0/public/AssetPairs")
-            pares_json=response.json()['result']
-            self.pares_json=pares_json
-            self.pares=[ pares_json[key]['wsname'] for key in pares_json.keys()]
+            pares_json = response.json()['result']
+            self.pares_json = pares_json
+            self.pares = [pares_json[key]['wsname'] for key in pares_json.keys()]
         except KeyError:
             print("No se puede acceder a los pares disponibles")
 
         finally:
             return self.pares
-
-
