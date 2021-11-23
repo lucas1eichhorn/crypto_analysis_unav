@@ -36,7 +36,7 @@ class CotizacionCripto:
         critpto_seleccionada = [value for key, value in kraken.pares_json.items() if value['wsname'] == self.par]
         self.base = critpto_seleccionada[0]['quote'][1:]
         self.altname = critpto_seleccionada[0]["altname"]
-        print(int(self.desde.timestamp()))
+
         crypto_response, last = kraken.api.get_ohlc_data(self.altname, interval=kraken.intervalo_velas[self.intervalo],
                                                          since=int(self.desde.timestamp()), ascending=True)
 
