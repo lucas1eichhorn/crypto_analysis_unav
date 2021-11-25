@@ -1,5 +1,7 @@
 import pandas as pd
 from KrakenAPIConnector import KrakenAPIConnector
+# descomentar linea para test
+# from project_crypto_reader.KrakenAPIConnector import KrakenAPIConnector
 from ta.volume import VolumeWeightedAveragePrice
 
 
