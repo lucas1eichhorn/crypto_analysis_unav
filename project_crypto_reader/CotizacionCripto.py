@@ -11,6 +11,17 @@ class CotizacionCripto:
    """
 
     def __init__(self, par, intervalo, desde, intervalo_vwap=10):
+        """
+        Constuctor de la clase
+
+            Parameteros
+            ----------
+            par: str
+            intervalo: str
+            desde: str
+            intervalo_vwap: int
+        """
+
         self.par = par
         self.intervalo = intervalo
         self.desde = desde
@@ -32,6 +43,10 @@ class CotizacionCripto:
         return dataframe
 
     def obtener_cotizacion(self):
+        """
+        Metodo que obtiene la cotizacion de un par de critpomonedas desde la api de kraken
+        :return: Pandas Dataframe - contiene el dataset con los precios de cotizacion en un intervalo
+        """
         print("obteniendo cotización de " + self.par)
         kraken = KrakenAPIConnector()
         # obtenemos la divisa base del par seleccionado

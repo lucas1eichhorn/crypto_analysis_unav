@@ -1,6 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import plotly.graph_objs as go
+from plotly.subplots import make_subplots
 from CotizacionCripto import CotizacionCripto
 from KrakenAPIConnector import KrakenAPIConnector
 from datetime import datetime, timedelta
@@ -46,7 +47,10 @@ fecha_inicio_dt = datetime.strptime(fecha_inicio_REFORMAT, "%d-%m-%Y")
 par_cripto = CotizacionCripto(cripto_seleccionada, vela_seleccionada, fecha_inicio_dt, vwap_seleccionado)
 data_crypto = par_cripto.obtener_cotizacion()
 
-fig = go.Figure()
+# se crea una grilla de graficos para las velas y volumen
+fig = make_subplots(rows=2, cols=1, shared_xaxes=True,
+                    vertical_spacing=0.03, subplot_titles=(cripto_seleccionada, 'Volumen'),
+                    row_width=[0.2, 0.7])
 
 # Se crea el grafico de velas
 candlestick = go.Candlestick(
@@ -56,13 +60,16 @@ candlestick = go.Candlestick(
     low=data_crypto['low'],
     close=data_crypto['close']
 )
-fig.add_trace(candlestick)
+fig.add_trace(candlestick, row=1, col=1)
+
+# se añade el volumen en un segundo grafico de barras
+fig.add_trace(go.Bar(x=data_crypto.index, y=data_crypto['volume'], showlegend=False), row=2, col=1)
+
 # Se añade la linea del VWAP
 # Personalizacion de opciones del grafico
 fig.update_layout(
     xaxis_rangeslider_visible=False,
 
-    title=cripto_seleccionada,
     yaxis_title=par_cripto.base,
     showlegend=False,
     height=600
