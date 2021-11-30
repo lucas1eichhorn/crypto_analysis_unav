@@ -3,11 +3,11 @@ from datetime import datetime
 import pandas as pd
 
 
-def test_get_pairs(monkeypatch):
+def test_obtener_cotizaciones(monkeypatch):
     """
-        DADO un metodo que obtiene los pares disponibles en Kraken
+        DADO un metodo que devuelve la cotizacion de una criptomoneda en un periodo seleccionado
         CUANDO se ejecuta la llamada a la api
-        THEN se retorna una lista de pares de criptomoniedas que contiene BTC/USD
+        LUEGO se retorna una DataFrame de pandas con los precios de la criptomoneda en un intervalo
     """
 
     fecha_inicio_dt = datetime.strptime("25-08-2021", "%d-%m-%Y")

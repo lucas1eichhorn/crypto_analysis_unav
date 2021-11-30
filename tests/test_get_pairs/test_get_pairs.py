@@ -39,9 +39,8 @@ def test_get_pairs2(monkeypatch):
     """
         DADO un metodo que obtiene los pares disponibles en Kraken
         CUANDO se ejecuta la llamada a la api
-        THEN se retorna una lista de pares de criptomoniedas que contiene BTC/USD
+        LUEGO se retorna una lista de pares de criptomoniedas que contiene BTC/USD
     """
-
 
     class MockResponse:
 
