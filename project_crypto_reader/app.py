@@ -45,7 +45,11 @@ fecha_inicio_dt = datetime.strptime(fecha_inicio_REFORMAT, "%d-%m-%Y")
 
 # Se instancia el objeto cripto
 par_cripto = CotizacionCripto(cripto_seleccionada, vela_seleccionada, fecha_inicio_dt, vwap_seleccionado)
-data_crypto = par_cripto.obtener_cotizacion()
+
+try:
+    data_crypto = par_cripto.obtener_cotizacion()
+except (HTTPError, KrakenAPIError, CallRateLimitError) as err:
+    st.warning(err)
 
 # se crea una grilla de graficos para las velas y volumen
 fig = make_subplots(rows=2, cols=1, shared_xaxes=True,
