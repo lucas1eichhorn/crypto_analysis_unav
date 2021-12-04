@@ -2,21 +2,21 @@
 
 ## MASTER BIG DATA SCIENCE
 
-**UNAV 21-**
+**UNAV 21-22**
 
 # Análisis de Criptomonedas
 
 Alumno: Lucas Eichhorn
 
 
-## Repositorio:..............................................................................................
+## Repositorio:
 
 Como software de control de versiones para la realizacion del proyecto se utilizó la tecnología GIT y un
 repositorio de GitHub, que permiten la eficiencia, confiabilidad y compatibilidad del mantenimiento de
 versiones de la aplicación al tener un gran número de archivos de código fuente.
 
 
-## Framework de desarrollo: Streamlit............................................................
+## Framework de desarrollo: Streamlit
 
 Para el desarrollo del presente proyecto se decidió aprender y utilizar el framework open-source Streamlit,
 el cuando permite crear aplicaciones web para Machine Learning y Ciencia de datos en simples pasos. En
@@ -34,7 +34,7 @@ Pueden acceder al mismo mediante el siguiente enlace:
 https://share.streamlit.io/lucas1eichhorn/crypto_analysis_unav/
 project_crypto_reader/app.py
 
-## Estructura del proyecto:............................................................................
+## Estructura del proyecto:
 
 **POETRY**
 
@@ -140,7 +140,7 @@ de esta forma podremos tener una salida controlada de la aplicación e informar 
 interfaz web de lo ocurrido:
 
 
-## ejecución de la app en local mediante pycharm:.........................................
+## Ejecución de la app en local mediante pycharm
 
 Luego de clonar proyecto desde el repositorio de GitHub en su ordenador se puede abrir el mismo desde
 PyCharm, el cual tiene incorporada la herramienta de _virtualenv_ la cual permite trabajar con un entrono
@@ -157,7 +157,7 @@ aplicación. Dichas tareas han de realizarse con los siguientes comandos por la 
 cd project_crypto_reader
 streamlit run app.py
 ```
-## Guía de usuario:........................................................................................
+## Guía de usuario:
 
 La interfaz web desarrollada con Streamlit presenta al usuario un menú de opciones para elegir los
 parámetros por los que desea filtrar la cotizaciones de la criptomonedas:
@@ -177,7 +177,7 @@ periodo desea que se generen las velas japonesas que muestran la evolución de p
 **Intervalo de VWAP:** Este input permite al usuario elegir el intervalo con el que desea que se calcule el
 indiciador de precio ponderado por volumen, conocido como VWAP.
 
-## Testing con Pytest:....................................................................................
+## Testing con Pytest:
 
 Se ha utilizado la librería Pytest para realizar las pruebas en el proyecto. El directorio **_test_** contiene los
 casos de prueba del código con _unit testing e integration testing_. Tambien han sido incluidos los archivos
@@ -198,7 +198,7 @@ correr los tests de cambié la importación del modulo de la API de Kraken
 especificando el directorio en que se encuentra, ya que sino fallan los
 test porque no se encuenta el modulo especificado.
 
-## Linter: Pylint con PEP8...............................................................................
+## Linter: Pylint con PEP8
 
 Es inevitable tener errores en el código cuando desarrollamos una aplicación. estos errores a veces son
 malos y causan problemas en la interfaz que generan incomodidad en los usuarios, otros comprometen la
