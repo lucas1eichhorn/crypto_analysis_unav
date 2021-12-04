@@ -29,10 +29,7 @@ administren y colaboren fácilmente en sus aplicaciones Streamlit.
 Este proyecto hace uso del plan gratuito de Streamlit Cloud, que como PasS permitió realizar el deploy del
 proyecto y distribuirlo por internet para su presentación:
 
-Pueden acceder al mismo mediante el siguiente enlace:
-
-https://share.streamlit.io/lucas1eichhorn/crypto_analysis_unav/
-project_crypto_reader/app.py
+Pueden acceder al mismo mediante el siguiente [enlace](https://share.streamlit.io/lucas1eichhorn/crypto_analysis_unav/project_crypto_reader/app.py)
 
 ## Estructura del proyecto:
 
