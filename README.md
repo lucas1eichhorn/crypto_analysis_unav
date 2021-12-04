@@ -39,16 +39,14 @@ La estructura inicial del proyecto fue creada con Poetry, la cual es es una herr
 dependencias y el empaquetado en Python. Permite declarar las bibliotecas de las que depende el
 proyecto y administrar la instalación o actualización al momento de compartir el proyecto.
 
-```
 Inicialmente se inició un nuevo proyecto ejecutando el comando:
-```
+
 ```
 poetry new project-critpo-reader
 ```
-```
 De esta manera se crea el proyecto con un template base de estructura
 de archivos que nos permite desarrollar la aplicación a partir de aqui.
-```
+
 
 Poetry utiliza un archivo pyproject.toml que se ubica en el raíz de proyecto y donde podemos declarar las
 dependencias de Python que se utilizaran para la ejecución del mismo.
