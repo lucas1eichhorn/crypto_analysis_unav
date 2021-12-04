@@ -123,11 +123,9 @@ de las siguientes librerías de Python:
 - **ta :(technical analysis):** para el calculo del vwap se decidió utilizar una librería conocida por
     dedicarse al análisis técnico y que nos provee distintos indicadores, entre ellos el solicitado de
     VWAP.
+    Esta librería de análisis técnico es útil para realizar cálculos a partir de datos de series de tiempo
+    financieras (Apertura, Cierre, Alto, Bajo, Volumen). Está construido sobre Pandas y Numpy
 
-```
-Esta librería de análisis técnico es útil para realizar cálculos a partir de datos de series de tiempo
-financieras (Apertura, Cierre, Alto, Bajo, Volumen). Está construido sobre Pandas y Numpy
-```
 **MANEJO DE ERRORES:**
 
 En el presente proyecto se ha considerado la captura de los posibles errores lanzados por la API de Kraken,
@@ -182,9 +180,9 @@ durante el testeo.
 
 Para ejecutar las pruebas se debe estar posicionado en el directorio raíz de proyecto desde una terminal, y
 utilizar el comando:
-
+```
 python -m pytest tests
-
+```
 
 ### NOTA:
 
