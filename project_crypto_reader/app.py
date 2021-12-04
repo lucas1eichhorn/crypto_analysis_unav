@@ -1,5 +1,6 @@
 import streamlit as st
-import streamlit.components.v1 as components
+from pykrakenapi.pykrakenapi import KrakenAPIError, CallRateLimitError
+from requests import HTTPError
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 from CotizacionCripto import CotizacionCripto
