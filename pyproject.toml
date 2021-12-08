@@ -16,6 +16,7 @@ ta = "0.8.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+pytest-cov = "^3.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
