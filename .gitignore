@@ -1,3 +1,6 @@
 .idea/
 project_crypto_reader/__pycache__/
 __pytestcache__/
+tests/__pycache__/
+tests/test_get_pairs/__pycache__/
+tests/test_obtener_cotizaciones/__pycache__/
